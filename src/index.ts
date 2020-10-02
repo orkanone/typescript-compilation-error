@@ -44,7 +44,7 @@ function request (product: { vendor: string }, vendor: string) {
 async function showProduct (type: string) {
     for (const { category, vendor } of categories) {
 
-        if (!config.market[vendor][type]) {
+        if (!config.market?.[vendor]?.[type]) {
             continue;
         }
 
